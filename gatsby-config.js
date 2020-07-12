@@ -1,72 +1,57 @@
-const config = require("./config.json")
-const infoData = require("./content/data/info.json")
-
 module.exports = {
-  //this makes the site config available to forestry cms
   siteMetadata: {
-    title: config.title,
-    description: config.description,
-    repoUrl: config.repository_url,
-    about: config.about,
-    contact: config.contact,
-    primaryColor: config.primary_color,
-    infoData: infoData
+    title: `Gatsby Default Starter`,
+    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
+    author: `@gatsbyjs`,
   },
   plugins: [
-    "gatsby-plugin-sass",
-    "gatsby-transformer-remark",
-    "gatsby-plugin-react-helmet",
-    "gatsby-transformer-yaml",
-    {
-      resolve: "gatsby-source-filesystem",
-      options: {
-        name: "src",
-        path: `${__dirname}/src/`,
-      },
-    },
-    {
-      resolve: "gatsby-source-filesystem",
-      options: {
-        name: "posts",
-        path: `${__dirname}/content/posts`
-      }
-    },
-    {
-      resolve: "gatsby-source-filesystem",
-      options: {
-        name: "data",
-        path: `${__dirname}/content/data`,
-      },
-    },
+    `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: "images",
-        path: `${__dirname}/content/images`,
+        name: `images`,
+        path: `${__dirname}/src/images`,
       },
-    },
-    {
-      resolve: "gatsby-plugin-sharp", 
-      options: {
-        defaultQuality: 75
-      }
     },
     `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
     {
-      resolve: "gatsby-transformer-remark",
+      resolve: `gatsby-plugin-manifest`,
       options: {
-        plugins: [
-          "gatsby-remark-relative-images",
-          "gatsby-remark-normalize-paths",
-          {
-            resolve: "gatsby-remark-images",
-            options: {
-              maxWidth: 1000,
-              linkImagesToOriginal: false,
-            },
-          },
-        ],
+        name: `gatsby-starter-default`,
+        short_name: `starter`,
+        start_url: `/`,
+        background_color: `#663399`,
+        theme_color: `#663399`,
+        display: `minimal-ui`,
+        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
     },
+    { 
+      resolve:`gatsby-plugin-sass`,
+      //options: {
+      //  postCssPlugins: [
+      //    require("tailwindcss"),
+      //    require("./tailwind.config.js"),
+      //  ]
+      //}
+    },
+    {
+      resolve: "gatsby-plugin-react-svg",
+      options: {
+      rule: {
+          include: /images/ // See below to configure properly
+        }
+      }
+    },
+    {
+      resolve: `gatsby-source-instagram`,
+      options: {
+        username: `rekxsh`,
+      },
+    },
+    // this (optional) plugin enables Progressive Web App + Offline functionality
+    // To learn more, visit: https://gatsby.dev/offline
+    // `gatsby-plugin-offline`,
   ],
 }
