@@ -47,7 +47,7 @@ const Header = () => {
         </div>
         <div className={`navigation navbar-menu ${menuActive}`} >
           <div className="navbar-start">
-        <!--    <div className="navbar-item" onClick={toggleMenu}>
+           <div className="navbar-item" onClick={toggleMenu}>
               <Link to="/gallery">Gallery</Link>
             </div>
             <div className="navbar-item" onClick={toggleMenu}>
@@ -59,7 +59,7 @@ const Header = () => {
             <div className="navbar-item" onClick={toggleMenu}>
               <Link to="/nothing">404 Test</Link>
             </div>
-        </div> -->
+        </div>
           <div className="navbar-end"></div>
         </div>
       </nav>
