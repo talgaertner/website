@@ -2,23 +2,11 @@ import { Link } from "gatsby"
 import React from "react"
 import {useStaticQuery, graphql } from "gatsby";
 import Img from "gatsby-image";
-import logo from "../images/logo.svg";
 
 const Header = () => {
 
   const [state, setState] = React.useState(false);
-  const data = useStaticQuery(graphql`
-        query {
-          logo: file(relativePath: { eq: "logo_dog.png" }) {
-                childImageSharp {
-                    fluid(maxWidth: 300) {
-                        ...GatsbyImageSharpFluid
-                    }
-                }
-            }
-        }
-  `);
-
+ 
   const menuActive = state ? 'is-active' : '';
   const burgerActive = state ? 'is-active' : '';
 
