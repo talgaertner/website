@@ -1,7 +1,7 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "talgaertner-website",
   "private": true,
-  "description": "Samy The Husky",
+  "description": "Talgaertner",
   "version": "0.1.0",
   "author": "Milan Knab <m.knab@tuta.io>",
   "dependencies": {
@@ -30,7 +30,10 @@
     "tailwindcss": "^1.4.6"
   },
   "keywords": [
-    "gatsby"
+    "gatsby",
+    "talgaertner",
+    "talgärtner",
+    "garten"
   ],
   "license": "MIT",
   "scripts": {
@@ -44,7 +47,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+    "url": "https://github.com/talgaertner/website"
   },
   "bugs": {
     "url": "https://github.com/gatsbyjs/gatsby/issues"

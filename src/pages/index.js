@@ -1,4 +1,5 @@
-import React from "react"
+import React from "react";
+import {Helmet} from "react-helmet";
 import {useStaticQuery, graphql } from "gatsby";
 import Img from "gatsby-image";
 import "../styles/styles.scss"
@@ -18,7 +19,27 @@ const NotFoundPage = () => {
       }
   `)
   return (
-    <div class="notFound">
+    <div class="wip">
+     <Helmet>
+         <title>Talgärtner</title>
+         <meta name="description" content="Ihre Talgärtner" />
+         <html lang="de" amp />
+         <base target="_blank" href="https://talgaertner.de/" />
+         <link rel="canonical" href="https://talgaertner.de/index.html" />
+         <script type="application/ld+json">
+           {`
+              {
+                "@type": "Organization",
+                "url": "https://www.talgaertner.de",
+                "name": "Jacob Valentin Hart und Hendrik Nicolai Hitschler GbR",
+                "contactPoint": {
+                  "@type": "ContactPoint",
+                  "email": "talgaertner@gmx.de"
+                }
+              }
+            `}
+          </script>
+     </Helmet>
       <Header />
       <section class="hero is-fullheight-with-navbar">
         <div class="hero-body">
