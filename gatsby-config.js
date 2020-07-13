@@ -1,10 +1,12 @@
 module.exports = {
   siteMetadata: {
     title: `Talgärtner`,
+    siteUrl: `https://www.talgaertner.de`,
     description: `Talgärtner machen ihren Garten wieder Flott.`,
     author: `@talgaertner`,
   },
   plugins: [
+    `gatsby-plugin-sitemap`,
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,

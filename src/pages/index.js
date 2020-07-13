@@ -26,19 +26,6 @@ const NotFoundPage = () => {
          <html lang="de" amp />
          <base target="_blank" href="https://talgaertner.de/" />
          <link rel="canonical" href="https://talgaertner.de/index.html" />
-         <script type="application/ld+json">
-           {`
-              {
-                "@type": "Organization",
-                "url": "https://www.talgaertner.de",
-                "name": "Jacob Valentin Hart und Hendrik Nicolai Hitschler GbR",
-                "contactPoint": {
-                  "@type": "ContactPoint",
-                  "email": "talgaertner@gmx.de"
-                }
-              }
-            `}
-          </script>
      </Helmet>
       <Header />
       <section class="hero is-fullheight-with-navbar">
