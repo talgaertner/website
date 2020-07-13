@@ -23,6 +23,7 @@ const NotFoundPage = () => {
      <Helmet>
          <title>Talgärtner</title>
          <meta name="description" content="Ihre Talgärtner" />
+         <meta name="google-site-verification" content="nbUOlayUgalS7hFlv0ac3i22CEHqshBId85Sj0RcLbA" />
          <html lang="de" amp />
          <base target="_blank" href="https://talgaertner.de/" />
          <link rel="canonical" href="https://talgaertner.de/index.html" />
