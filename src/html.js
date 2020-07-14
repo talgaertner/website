@@ -12,7 +12,7 @@ export default function HTML(props) {
             <meta name="viewport" content="width=device-width" minimum-scale="1" initial-scale="1" />
             <meta name="description" content="Ihre Talgärtner" />
             <meta name="google-site-verification" content="DTMnqKYWsS-n5IoBDZy2iax7ZzLJgK8-FRlOIEPvEow" />
-            <base target="_blank" href="https://talgaertner.de/" />
+            <base target="_blank" href="https://talgaertner.de" />
             <link rel="canonical" href="https://talgaertner.de/index.html" />
             <script async src="https://cdn.ampproject.org/v0.js"></script>
         </Helmet>
