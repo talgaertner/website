@@ -9,6 +9,18 @@ module.exports = {
     `gatsby-plugin-sitemap`,
     `gatsby-plugin-react-helmet`,
     {
+      resolve: 'gatsby-plugin-html2amp',
+      options: {
+        files: ['post/**/index.html', 'index.html'],
+        publicPath: 'public',
+        //gaConfigPath: 'gaConfig.json',
+        dist: 'public',
+        optimize: true,
+        htmlPlugins: [],
+        cssPlugins: []
+      }
+    },
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
