@@ -12,7 +12,7 @@ module.exports = {
       resolve: 'gatsby-plugin-html2amp',
       options: {
         files: ['post/**/index.html', 'index.html'],
-        publicPath: 'public',
+        publicPath: 'public/dist',
         //gaConfigPath: 'gaConfig.json',
         dist: 'public',
         optimize: true,
