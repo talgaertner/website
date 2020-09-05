@@ -26,6 +26,6 @@ fields:
   label: Über uns
   default: Über uns
 - type: text
-  name: contact
+  name: headcontact
   label: Kontakt
   default: Kontakt

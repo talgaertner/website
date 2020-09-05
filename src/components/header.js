@@ -15,7 +15,7 @@ graphql`query {
       projects
       services
       about
-      contact
+      headcontact
       home
       logo_image {
         childImageSharp {
@@ -65,7 +65,7 @@ graphql`query {
               </NavDropdown>
                 <Link className={`nav-link ${active === "projects" ? "is-active" : '' }`} to="/projects">{data.content.frontmatter.projects}</Link>
                 <Link className={`nav-link ${active === "about" ? "is-active" : '' }`} to="/about">{data.content.frontmatter.about}</Link>
-                <Link className={`nav-link ${active === "contact" ? "is-active" : '' }`} to="/contact">{data.content.frontmatter.contact}</Link>
+                <Link className={`nav-link ${active === "contact" ? "is-active" : '' }`} to="/contact">{data.content.frontmatter.headcontact}</Link>
             </Nav>
         </Navbar.Collapse> 
       </Navbar>

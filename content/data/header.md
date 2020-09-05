@@ -4,7 +4,7 @@ home: "Home"
 services: "Leistungen"
 projects: "Projekte"
 about: "Über uns"
-contact: "Kontakt"
+headcontact: "Kontakt"
 
 ---
   
