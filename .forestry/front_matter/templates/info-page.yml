@@ -1,47 +1,58 @@
 ---
-label: Info Page
+label: Kontakt Page
 hide_body: true
 fields:
-- name: description
-  type: textarea
-  default: ''
-  config:
-    required: false
-    wysiwyg: true
-    schema:
-      format: html-blocks
-  label: description
-  description: Enter description here
-- name: cta
-  type: textarea
-  default: ''
-  config:
-    required: false
-    wysiwyg: true
-    schema:
-      format: html-blocks
-  label: cta
-  description: Enter call to action here
 - type: field_group
-  name: contact
-  label: contact
+  name: adresse
+  label: Adresse
   fields:
   - type: text
-    name: email
-    label: email
+    name: adress_text
+    label: Address Text
+    default: Unsere Adresse
   - type: text
-    name: twitter_handle
-    label: twitter_handle
+    name: strasse
+    label: Strasse
+    default: Simonsstr. 83
   - type: text
-    name: github_handle
-    label: github_handle
-- name: background_color
-  type: color
-  label: background_color
-  config:
-    required: false
-    color_format: Hex
-  description: Enter info page background color
-  default: "#B1BCBC"
+    name: plz
+    label: PLZ
+    default: '42117'
+  - type: text
+    name: stadt
+    label: Stadt
+    default: Wuppertal
+- type: field_group
+  name: contact
+  label: Kontakt
+  fields:
+  - type: text
+    name: call_text
+    label: Telefon Text
+    default: Rufen Sie uns an!
+  - type: text
+    name: tel
+    label: Telefon ohne +49
+    default: 0163 9732387
+  - type: text
+    name: tel_link
+    label: Telefon mit +49
+    default: "+491639732387"
+  - type: text
+    name: whats_link
+    label: Whatsapp Link (mit +49)
+    default: "+491639732387"
+  - type: text
+    name: whatsapp_text
+    label: Whatsapp Text
+    default: Nachricht Schreiben!
+  - type: text
+    name: mail_text
+    label: E-Mail Text
+    default: Senden Sie uns eine Mail!
+  - type: text
+    name: mail
+    label: E-Mail
+    default: talgaertner@gmx.de
 pages:
 - content/data/info.json

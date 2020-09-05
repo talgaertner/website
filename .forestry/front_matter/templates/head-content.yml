@@ -1,0 +1,31 @@
+---
+label: Header Config
+hide_body: true
+fields:
+- name: logo_image
+  type: file
+  config:
+    maxSize: '10'
+  label: Logo image
+  description: Logo Bild eintragen
+  default: "/content/images/gatsby-icon.png"
+- type: text
+  name: home
+  label: Home
+  default: Home
+- type: text
+  name: services
+  label: Leistungen
+  default: Leistungen
+- type: text
+  name: projects
+  label: Projekte
+  default: Projekte
+- type: text
+  name: about
+  label: Über uns
+  default: Über uns
+- type: text
+  name: contact
+  label: Kontakt
+  default: Kontakt

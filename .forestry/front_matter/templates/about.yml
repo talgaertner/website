@@ -1,0 +1,32 @@
+---
+label: About Config
+hide_body: false
+fields:
+- type: text
+  name: seotitle
+  label: Seo Title
+  default: Über uns
+- name: image
+  type: file
+  config:
+    maxSize: '20'
+  label: Mitarbeiter image
+  description: Bild eintragen
+  default: "/content/images/404.jpg"
+- type: text
+  name: namen
+  label: Namen
+  default: Jacob Hart & Hendrik Hitschler
+- type: textarea
+  name: about
+  label: Über uns
+  default: Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
+    eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+    At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
+    no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit
+    amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore
+    et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo
+    duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est
+    Lorem ipsum dolor sit amet.
+pages:
+- content/data/about.md

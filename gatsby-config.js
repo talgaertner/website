@@ -1,25 +1,20 @@
+const config = require("./config.json")
+const infoData = require("./content/data/info.json")
+
 module.exports = {
   siteMetadata: {
-    title: `Talgärtner`,
-    siteUrl: `https://www.talgaertner.de`,
-    description: `Talgärtner machen ihren Garten wieder Flott.`,
-    author: `@talgaertner`,
+    title: config.title,
+    siteUrl: config.site_url,
+    description: config.description,
+    author: config.author,
+    contact: config.contact,
+    infoData: infoData
   },
   plugins: [
     `gatsby-plugin-sitemap`,
     `gatsby-plugin-react-helmet`,
-    {
-      resolve: 'gatsby-plugin-html2amp',
-      options: {
-        files: ['post/**/index.html', 'index.html'],
-        publicPath: 'public/dist',
-        //gaConfigPath: 'gaConfig.json',
-        dist: 'public',
-        optimize: true,
-        htmlPlugins: [],
-        cssPlugins: []
-      }
-    },
+    "gatsby-transformer-remark",
+    "gatsby-transformer-yaml",
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -27,43 +22,84 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
+    {
+      resolve: `gatsby-plugin-react-helmet-canonical-urls`,
+      options: {
+        siteUrl: `https://www.talgaertner.de`,
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-html2amp',
+      options: {
+        files: ['**/*.html', 'index.html'],
+        publicPath: 'public',
+        //gaConfigPath: 'gaConfig.json',
+        dist: 'public/dist',
+        optimize: true,
+        htmlPlugins: [],
+        cssPlugins: []
+      }
+    },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "services",
+        path: `${__dirname}/content/services`
+      }
+    },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "data",
+        path: `${__dirname}/content/data`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: "images_cms",
+        path: `${__dirname}/content/images`,
+      },
+    },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `Talgaertner`,
+        short_name: `Talgaertner`,
         start_url: `/`,
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        //icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `content/images/logo.png`, // This path is relative to the root of the site.
       },
     },
-    {
+    { 
       resolve:`gatsby-plugin-sass`,
-      //options: {
-      //  postCssPlugins: [
-      //    require("tailwindcss"),
-      //    require("./tailwind.config.js"),
-      //  ]
-      //}
-    },
-    {
-      resolve: "gatsby-plugin-react-svg",
-      options: {
-      rule: {
-          include: /images/ // See below to configure properly
-        }
-      }
     },
     {
       resolve: `gatsby-source-instagram`,
       options: {
-        username: `rekxsh`,
+        username: `7005914713`, //`rekxsh` 7005914713
       },
     },
+    {
+      resolve: "gatsby-transformer-remark",
+      options: {
+        plugins: [
+          "gatsby-remark-relative-images",
+          "gatsby-remark-normalize-paths",
+          {
+            resolve: "gatsby-remark-images",
+            options: {
+              maxWidth: 1000,
+              linkImagesToOriginal: false,
+            },
+          },
+        ],
+      },
+    }
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,

@@ -1,51 +1,98 @@
-import React from "react";
-import {Helmet} from "react-helmet";
-import {useStaticQuery, graphql } from "gatsby";
-import Img from "gatsby-image";
-import "../styles/styles.scss"
-// Import Components
-import Header from '../components/header'
+import React from "react"
+import { useStaticQuery, graphql } from "gatsby"
+import Layout from "../components/layout"
+import SEO from "../components/seo"
+import Row from "react-bootstrap/Row"
+import Col from "react-bootstrap/Col"
+import Container from "react-bootstrap/Container"
 
-const NotFoundPage = () => {
-  const data = useStaticQuery(graphql`
-      query {
-          image: file(relativePath: { eq: "under_construction.jpg" }) {
-              childImageSharp {
-                  fluid(maxWidth: 300) {
-                      ...GatsbyImageSharpFluid
-                  }
-              }
+import CarouselWrap from "../components/carouselItem"
+
+const IndexPage = () => {
+
+const data = useStaticQuery(graphql`
+query {
+  content: markdownRemark(fileAbsolutePath: {regex: "/(home.md)/"}) {
+    frontmatter {
+      seotitle
+      intro
+    }
+    html
+  }
+  insta: allInstaNode(filter: { username: { eq: "7005914713" } }) {
+    edges {
+      node {
+        id
+        username
+        likes
+        caption
+        localFile {
+          childImageSharp {
+            fluid(quality: 70, maxWidth: 600, maxHeight: 600) {
+              ...GatsbyImageSharpFluid_withWebp              
+            }
           }
+        }
       }
-  `)
-  return (
-    <div class="wip">
-        <Helmet>
-            <html lang="de" amp />
-            <meta charset="utf-8" />
-            <title>Talgärtner</title>
-            <meta name="viewport" content="width=device-width" minimum-scale="1" initial-scale="1" />
-            <meta name="description" content="Ihre Talgärtner" />
-            <meta name="google-site-verification" content="DTMnqKYWsS-n5IoBDZy2iax7ZzLJgK8-FRlOIEPvEow" />
-            <link rel="canonical" href="https://talgaertner.de/index.html" />
-            <script async src="https://cdn.ampproject.org/v0.js"></script>
-        </Helmet>
-      <Header />
-      <section class="hero is-fullheight-with-navbar">
-        <div class="hero-body">
-          <div class="container has-text-centered">
-            <div class="content-wrap">
-                <h1 class="title is-2">Website Under Construction!</h1>
-                <figure class="image">
-                    <Img fluid={data.image.childImageSharp.fluid} />
-                </figure>
-                <h2 class="title is-4"><a href= "mailto:talgaertner@gmx.de">Kontakt: talgaertner@gmx.de</a></h2>
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
-  );
- }
+    }
+  }
+  services: allMarkdownRemark(
+    filter: {fileAbsolutePath: {regex: "/(services)/"}}
+  ) {
+    edges {
+      node {
+        fields {
+          slug
+        }
+        frontmatter {
+          title
+          image {
+            childImageSharp {
+              fluid(maxWidth: 300) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  logos: allFile(filter: {relativePath: {regex: "/(service-)/"}}) {
+    edges {
+      node {
+        childImageSharp {
+          fixed(width: 25) {
+            src
+          }
+        }
+        name
+      }
+    }
+  }
+}
+`)
 
-export default NotFoundPage
+
+return ( <Layout active="home">
+    <SEO title={data.content.frontmatter.seotitle} />
+    <Container fluid="md" className="layout-center pb-4">
+    <Row xs={1} md={2} className="justify-content-md-center">
+      <Col>
+        <p>{data.content.frontmatter.intro}</p>
+      </Col>
+      <Col>
+        <CarouselWrap data={data} />
+      </Col>
+    </Row>
+    <Row className="pt-4">
+      <Col>
+        <div className="wrap" dangerouslySetInnerHTML={{__html: data.content.html}}/>
+      </Col>
+    </Row>
+    </Container>
+  </Layout> 
+)
+};
+
+
+export default IndexPage

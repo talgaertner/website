@@ -1,45 +1,74 @@
 import { Link } from "gatsby"
 import React from "react"
 import {useStaticQuery, graphql } from "gatsby";
-import Img from "gatsby-image";
+import Navbar from 'react-bootstrap/Navbar';
+import Nav from 'react-bootstrap/Nav';
+import NavDropdown from 'react-bootstrap/NavDropdown'
 
-const Header = () => {
+const Header = ({active}) => {
 
-  const [state, setState] = React.useState(false);
- 
-  const menuActive = state ? 'is-active' : '';
-  const burgerActive = state ? 'is-active' : '';
-
-  function toggleMenu() {
-    setState(!state)
+const data = useStaticQuery(  
+graphql`query { 
+  content: markdownRemark (fileAbsolutePath: {regex: "/(header.md)/" }) {
+    fileAbsolutePath
+    frontmatter {
+      projects
+      services
+      about
+      contact
+      home
+      logo_image {
+        childImageSharp {
+          fixed(height: 75, width: 75) {
+            src
+          }
+        }
+      }
+    }
   }
-
-  function clearMenu() {
-    setState(false)
+  services: allMarkdownRemark(
+    filter: {fileAbsolutePath: {regex: "/(services)/"}}
+  ) {
+    edges {
+      node {
+        fields {
+          slug
+        }
+        frontmatter {
+          title
+        }
+      }
+    }
   }
+}`)
 
   return (
-    <header>
-      <nav className="navbar is-fixed-top" role="navigation" aria-label="main navigation">
-        <div className="navbar-brand">
-          <div className="navbar-item" onClick={clearMenu} >
-            <Link to="/">
-              Talgärtner
-            </Link>
-          </div>
-          <a role="button" onClick={toggleMenu} className={`navbar-burger burger ${burgerActive}`} aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-          </a>
-        </div>
-        <div className={`navigation navbar-menu ${menuActive}`} >
-          <div className="navbar-start">
-          </div>
-          <div className="navbar-end"></div>
-        </div>
-      </nav>
-    </header>
+      <Navbar className="navcontainer" fixed="top" collapseOnSelect expand="lg">
+        <Navbar.Brand>
+          <Link to="/">
+            <img src={data.content.frontmatter.logo_image.childImageSharp.fixed.src} width="75" height="75" className="d-inline-block align-top"
+        alt="Talgärtner"/>  
+          </Link>
+        </Navbar.Brand>  
+        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+        <Navbar.Collapse id="responsive-navbar-nav">
+            <Nav className={`nav ml-auto justify-content-end`}>
+                <Link className={` nav-link ${active === "home" ? "is-active" : '' }`} to="/">{data.content.frontmatter.home}</Link>
+              <NavDropdown title={data.content.frontmatter.services} id="collasible-nav-dropdown" className={`${active === "services" ? "is-active" : '' }`}>           
+                  {
+                    data.services.edges.map(current => (
+                      <Link key={current.node.fields.slug} className="ml-2 dropdown-item nav-link" to={current.node.fields.slug}>
+                        {current.node.frontmatter.title}
+                      </Link>
+                    ))
+                  }
+              </NavDropdown>
+                <Link className={`nav-link ${active === "projects" ? "is-active" : '' }`} to="/projects">{data.content.frontmatter.projects}</Link>
+                <Link className={`nav-link ${active === "about" ? "is-active" : '' }`} to="/about">{data.content.frontmatter.about}</Link>
+                <Link className={`nav-link ${active === "contact" ? "is-active" : '' }`} to="/contact">{data.content.frontmatter.contact}</Link>
+            </Nav>
+        </Navbar.Collapse> 
+      </Navbar>
   );
 
 }

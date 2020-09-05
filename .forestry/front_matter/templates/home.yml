@@ -1,0 +1,11 @@
+---
+label: Home Config
+hide_body: false
+fields:
+- type: text
+  name: seotitle
+  label: Seo Title
+  default: Home
+- type: textarea
+  name: intro
+  label: Intro Text

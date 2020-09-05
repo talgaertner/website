@@ -9,53 +9,85 @@ $black: #000;
 $maroon: #83333e;
 $off-white: #f2f4f5;
 
-@import "../../node_modules/bulma/bulma.sass";
+@import "~bootstrap/scss/bootstrap";
 
 html,
 body {
-    //@apply has-navbar-fixed-top;
+    @apply has-navbar-fixed-top;
     font-family: $font;
     font-size: 16px;
-    padding: 0;
-    margin: 0;
-
+    height: 100%;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+    @media (max-height: 812px) {
+      font-size: 14px;
+    }
 }
 
-.banner {
-  .container {
-      @media (max-width: 756px) {
-        top:0px
+ /* Hide scrollbar for Chrome, Safari and Opera */
+body::-webkit-scrollbar {
+  display: none;
+}
+
+main {
+  position: absolute;
+  width: 100%;
+  height: 85%;
+  max-height: 85%;
+  top: 15%;
+}
+
+a, a:hover {
+  color: $black;
+  text-decoration: none;
+}
+
+.layout-center {
+  padding-top: 10%;
+  @media (max-height: 812px) {
+    margin-bottom: 15%;
+  }
+}
+
+.layout {
+  height: 85%;
+  max-height: 100%;
+}
+
+
+#responsive-navbar-nav {
+  background: white;
+  .nav {
+    a {
+      color: $black;
+    }
+    a:hover, a.is-active {
+      color: green;
+      text-decoration: none;
+    }
+  }
+}
+
+.navcontainer {
+   background: white;
+  .nav {
+    a {
+      color: $black;
+    }
+    a:hover, a.is-active {
+      color: green;
+      text-decoration: none;
+    }
+    .is-active {
+      a.dropdown-toggle {
+        color: green !important;
+        text-decoration: none;
       }
-      .columns {
-        .column {
-          .title {
-            @media (max-width: 756px) {
-              padding-top: 75%;
-              font-size: 32px;
-            }
-          }
-          &.is-5 {
-            .is-128x128 {
-              @media (max-width: 756px) {
-                padding-right: 50%;
-              }
-            }
-          }
-        }
-      }
-      top: 200px;
-  }
-}
-.navbar-item {
-  a {
-    color: $black;
-  }
-  a:hover {
-    color: $turquoise;
+    }
   }
 }
 
-.wip {
+.notFound {
   .hero {
     .hero-body {
       .container {
@@ -67,7 +99,7 @@ body {
                 width: 256px;
                 height: 256px;
               img {
-                @extend .is-rounded;
+           
               }
              }
           }
@@ -76,52 +108,17 @@ body {
   }
 }
 
-.instagram-feed {
-  padding-top: 4rem;
-  padding-left: 1%;
-  padding-right: 1%;
-  padding-bottom: 35px;
-  @media (max-width: 1024px) {
-    padding-left: 5px;
-    padding-right: 5px;
-  }
-  @media (max-width: 768px) {
-    padding-left: 3px;
-    padding-right: 3px;
-  }
-  .container {
-    .columns {
-      width: 100%;
-      height: 100%;
-      .column {
-        .node {
-          height: 100%;
-          .card-image {
-            margin: 0 auto;
-            padding-top: 2rem;
-            width: 416px;
-            @media (max-width: 1024px) {
-                width: 100%;
-            }
-            @media (max-width: 768px) {
-                width: 100%;
-            }
-          }
-          .card-content {
-              .media {
-                .media-content {
-                  margin-left: 15%;
-                  @media (max-width: 1024px) {
-                      margin-left: auto;
-                  }
-                  @media (max-width: 768px) {
-                      margin-left: auto;
-                  }
-                }
-              }
-          }
-        }
-      }
-    }
-  }
+.insta-card {
+  width: 100%;
+  height: 100%;
+}
+
+.wrap {
+  width: 100%;
+  height: 100%;
+}
+
+.contact-card {
+  width: 100%;
+  height: 100%;
 }

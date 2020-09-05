@@ -1,0 +1,20 @@
+---
+label: Footer Config
+hide_body: true
+fields:
+- type: text
+  name: impressum
+  label: Impressum Bezeichnung
+  default: Impressum
+- type: text
+  name: contact_field
+  label: Kontakt Bezeichnung
+  default: Kontakt
+- type: text
+  name: datenschutz
+  label: Datenschutz Bezeichnung
+  default: Datenschutz
+- type: text
+  name: copyright
+  label: Copyright
+  default: ''

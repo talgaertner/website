@@ -1,0 +1,17 @@
+{
+  "adresse": {
+    "adress_text": "Unsere Adresse",
+    "strasse": "Simonsstr. 83",
+    "plz": "42117",
+    "stadt": "Wuppertal"
+  },
+  "contact": {
+    "call_text": "Rufen Sie uns an!",
+    "tel": "0163 9732387",
+    "tel_link": "+491639732387",
+    "whats_link": "+491639732387",
+    "whatsapp_text": "Nachricht Schreiben!",
+    "mail_text": "Senden Sie uns eine Mail!",
+    "mail": "talgaertner@gmx.de"
+  }
+}

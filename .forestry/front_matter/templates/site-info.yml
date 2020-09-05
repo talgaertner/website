@@ -1,6 +1,6 @@
 ---
 label: Site Config
-hide_body: true
+hide_body: false
 fields:
 - type: text
   name: title
@@ -9,7 +9,10 @@ fields:
   name: description
   label: description
 - type: text
-  name: repository_url
-  label: repository_url
+  name: siteUrl
+  label: Webseite
+- type: text
+  name: author
+  label: Autor
 pages:
 - config.json

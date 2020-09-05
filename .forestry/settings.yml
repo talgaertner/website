@@ -4,19 +4,35 @@ auto_deploy: false
 admin_path: ''
 webhook_url: 
 sections:
-- type: heading
-  label: Content
+- type: document
+  path: content/data/header.md
+  label: Header Config
+- type: document
+  path: content/data/footer.json
+  label: Footer Config
 - type: directory
-  path: content/posts
-  label: Blog Posts
+  path: content/services
+  label: Leistungen
   create: documents
   match: "**/*"
   new_doc_ext: md
   templates:
-  - blog-post
+  - service-template
 - type: document
-  path: content/data/authors.yaml
-  label: Author List
+  path: content/data/home.md
+  label: Home Config
+- type: document
+  path: content/data/projects.md
+  label: Projekte Config
+- type: document
+  path: content/data/about.md
+  label: About Config
+- type: document
+  path: content/data/impressum.md
+  label: Impressum Config
+- type: document
+  path: content/data/datenschutz.md
+  label: Datenschutz Config
 - type: document
   path: content/data/info.json
   label: Info Page
