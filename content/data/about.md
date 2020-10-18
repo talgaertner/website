@@ -1,9 +1,11 @@
 ---
-seotitle: "Über uns"
+seotitle: Über uns
 image: "/content/images/404.jpg"
-namen: "Jacob Hart & Hendrik Hitschler"
-about: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet."
+namen: Jacob Hart & Hendrik Hitschler
+about: |-
+  Die Talgärtner - wir sind Jacob Hart und Hendrik Hitschler und stehen für persönlichen und hochwertigen Garten- und Landschaftsbau.
+  Uns verbindet die Liebe zur Natur und eine Macher-Mentalität der besonderen Art.
+  Wir gründeten die Talgärtner aus dem Wunsch heraus, die Natur der Stadt näher zu bringen und unser gelerntes Handwerk zum eigenen Business zu machen. Professionalität hat bei und oberste Priorität - dabei darf die Nähe zum Kunden nicht fehlen!
+  Wir freuen und daruaf, Sie kennen zu lernen und gemeinsam mit ihnen ihren Garten neu zu gestalten.
 
 ---
-  
-Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
