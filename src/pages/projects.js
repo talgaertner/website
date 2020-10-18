@@ -42,7 +42,7 @@ export const pageQuery = graphql`
         intro
       }
     }
-    allInstaNode(filter: { username: { eq: "7005914713" } }) {
+    allInstaNode(filter: { username: { eq: "44200929358" } }) {
       edges {
         node {
           id
