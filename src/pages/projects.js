@@ -47,7 +47,6 @@ export const pageQuery = graphql`
         node {
           id
           username
-          likes
           caption
           localFile {
             childImageSharp {
