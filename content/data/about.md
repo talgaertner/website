@@ -1,6 +1,6 @@
 ---
 seotitle: Über uns
-image: "/content/images/404.jpg"
+image: ''
 namen: Jacob Hart & Hendrik Hitschler
 about: |-
   Die Talgärtner - wir sind Jacob Hart und Hendrik Hitschler und stehen für persönlichen und hochwertigen Garten- und Landschaftsbau.
