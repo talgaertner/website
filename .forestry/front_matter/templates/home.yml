@@ -9,3 +9,9 @@ fields:
 - type: textarea
   name: intro
   label: Intro Text
+  config:
+    wysiwyg: true
+    schema:
+      format: html-blocks
+pages:
+- content/data/home.md
