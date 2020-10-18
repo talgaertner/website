@@ -12,3 +12,4 @@ image: "/content/images/_dsc3196.JPG"
 title: Holz und Steinterassen
 
 ---
+![](/content/images/_dsc3191.JPG)
