@@ -1,14 +1,9 @@
 ---
 contact_text: Kontaktieren Sie uns!
-simple: |-
-  Unsere Angebote in Bereich Baumfällung und Baumpflege:
-
-  - Rodung von Risikobäumen und totholz.
-  - Arbeiten mit Steiger und Baumkletterer.
-  - Fachgerechte Pflegeschnitte.
-  - Entfernung von Baumstümpfen
-
-  und vieles mehr...
+simple: "<p>Unsere Angebote in Bereich Baumfällung und Baumpflege: </p><ul><li><p>Rodung
+  von Risikobäumen und totholz. </p></li><li><p>Arbeiten mit Steiger und Baumkletterer.
+  </p></li><li><p>Fachgerechte Pflegeschnitte. </p></li><li><p>Entfernung von Baumstümpfen
+  <br><br>und vieles mehr...</p></li></ul>"
 image: "/content/images/photo_2020-10-18_16-32-15.jpg"
 title: Baumfällung und Pflege
 
