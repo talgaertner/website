@@ -36,8 +36,10 @@ return (
     <SEO title={data.content.frontmatter.seotitle} />
     <Container fluid="md" className="layout-center">
       <Row xs={1} md={2}>
-        <Col className="pb-3">
-          <Img fluid={data.content.frontmatter.image.childImageSharp.fluid} />
+        <Col className="pb-3"> { if ( data.content.frontmatter.image != null ) {
+          return (<Img fluid={data.content.frontmatter.image.childImageSharp.fluid} />);
+          }
+        }
         </Col>
         <Col className="pb-3">
           <h3>{data.content.frontmatter.namen}</h3>
