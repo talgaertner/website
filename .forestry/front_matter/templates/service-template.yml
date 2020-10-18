@@ -28,4 +28,5 @@ fields:
   description: Bild für die Leistung eintragen
   default: "/content/images/sarah-dorweiler-9Z1KRIfpBTM-unsplash.jpg"
 pages:
+- content/services/baumfallung-und-pflege.md
 - content/services/gartenpflege-und-gestaltung.md
