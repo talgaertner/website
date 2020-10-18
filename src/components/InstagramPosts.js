@@ -16,7 +16,7 @@ const Node = ({ node }) => {
         <div className="card-body">
           <div className="card-title">
             <p>
-              <a href={`https://www.instagram.com/p/${node.id}/`} target="_blank" rel="noreferrer">@{node.username}</a>
+              <a href={`https://www.instagram.com/p/${node.id}/`} target="_blank" rel="noreferrer">@Talgärtner</a>
             </p>
           </div>
           <div className="card-text">

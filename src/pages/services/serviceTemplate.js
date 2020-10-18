@@ -27,7 +27,8 @@ return (
             </Col>
             <Col>
               <div className="wrap">
-                <p>{frontmatter.simple}</p>
+                {console.log(frontmatter.simple)}
+                <div className="wrap" dangerouslySetInnerHTML={{__html: frontmatter.simple}} />
                 <h4>
                   <Link to="/contact">{frontmatter.contact_text}</Link> 
                 </h4>
@@ -46,8 +47,8 @@ return (
 }
 
 export const pageQuery = graphql`
-query data{
-  markdownRemark {
+query data($slug: String){
+  markdownRemark(fields: {slug: {eq: $slug}}) {
     html
     frontmatter {
       title

@@ -3,7 +3,7 @@ contact_text: Kontaktieren Sie uns!
 simple: |-
   Unsere Angebote im Bereich Holz und Steinterassen:
 
-  - Pflasterarbeiten Jedlicher Art
+  - Pflasterarbeiten Jeglicher Art
   - Holz Terassen in verschiedenen Stilen
   - Stufen, Rampen und Geländer
 
