@@ -1,7 +1,7 @@
 ---
 contact_text: Kontaktieren Sie uns!
 simple: |
-  Unser Angebot im Bereich Gartenpflege und Gestallung:
+  Unser Angebot im Bereich Gartenpflege und Gestaltung:
   - Verlegung von Rollrasen.
   - Pflegeschnitte von Hecken, Obstbäumen, und Sträuchern.
   - Pflanzarbeiten.
