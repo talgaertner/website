@@ -3,8 +3,6 @@ headline: Impressum
 intro: ''
 
 ---
-# Impressum
-
 Angaben gemäß § 5 TMG
 
 Jacob Hart & Hendrik Hitschler GbR  
