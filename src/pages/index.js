@@ -19,12 +19,11 @@ query {
     }
     html
   }
-  insta: allInstaNode(filter: { username: { eq: "7005914713" } }) {
+  insta: allInstaNode(filter: { username: { eq: "44200929358" } }) {
     edges {
       node {
         id
         username
-        likes
         caption
         localFile {
           childImageSharp {
