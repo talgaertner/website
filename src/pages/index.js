@@ -77,7 +77,7 @@ return ( <Layout active="home">
     <Container fluid="md" className="layout-center pb-4">
     <Row xs={1} md={2} className="justify-content-md-center">
       <Col>
-        <p>{data.content.frontmatter.intro}</p>
+        <div className="wrap" dangerouslySetInnerHTML={{__html: data.content.frontmatter.intro }} />
       </Col>
       <Col>
         <CarouselWrap data={data} />

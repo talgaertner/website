@@ -26,13 +26,10 @@ return (
               <Img fluid={frontmatter.image.childImageSharp.fluid} />
             </Col>
             <Col>
-              <div className="wrap">
-                {console.log(frontmatter.simple)}
                 <div className="wrap" dangerouslySetInnerHTML={{__html: frontmatter.simple}} />
                 <h4>
                   <Link to="/contact">{frontmatter.contact_text}</Link> 
                 </h4>
-              </div>
             </Col>
           </Row>
           <Row className="pt-4">
