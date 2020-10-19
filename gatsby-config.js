@@ -13,8 +13,16 @@ module.exports = {
   plugins: [
     `gatsby-plugin-sitemap`,
     `gatsby-plugin-react-helmet`,
-    "gatsby-transformer-remark",
+    "gatsby-transformer-remark",	  
     "gatsby-transformer-yaml",
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        host: 'https://www.talgaertner.de',
+        sitemap: 'https://www.talgaertner.de/sitemap.xml',
+        policy: [{ userAgent: '*', allow: '/' }]
+      }
+    },	  
     {
       resolve: `gatsby-source-filesystem`,
       options: {
