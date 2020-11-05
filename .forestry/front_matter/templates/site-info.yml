@@ -11,6 +11,21 @@ fields:
 - type: text
   name: siteUrl
   label: Webseite
+- name: font
+  type: select
+  default: Avenir
+  config:
+    required: false
+    options:
+    - Helvetica
+    - Avenir
+    source:
+      type: simple
+      section: 
+      file: 
+      path: 
+  label: font
+  description: Font auswahl
 - type: text
   name: author
   label: Autor
