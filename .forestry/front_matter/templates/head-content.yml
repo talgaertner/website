@@ -29,3 +29,5 @@ fields:
   name: headcontact
   label: Kontakt
   default: Kontakt
+pages:
+- content/data/header.md
