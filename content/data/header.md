@@ -5,5 +5,6 @@ services: Leistungen
 projects: Projekte
 about: Über uns
 headcontact: Kontakt
+header_background: "#8EC999"
 
 ---
