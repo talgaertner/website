@@ -1,5 +1,5 @@
 ---
-logo_image: "/content/images/logo.png"
+image: "/content/images/logo.png"
 home: Home
 services: Leistungen
 projects: Projekte

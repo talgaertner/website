@@ -17,7 +17,7 @@ graphql`query {
       about
       headcontact
       home
-      logo_image {
+      image {
         childImageSharp {
           fixed(height: 75, width: 75) {
             src
@@ -46,7 +46,7 @@ graphql`query {
       <Navbar className="navcontainer" fixed="top" collapseOnSelect expand="lg">
         <Navbar.Brand>
           <Link to="/">
-            <img src={data.content.frontmatter.logo_image.childImageSharp.fixed.src} width="75" height="75" className="d-inline-block align-top"
+            <img src={data.content.frontmatter.image.childImageSharp.fixed.src} width="75" height="75" className="d-inline-block align-top"
         alt="Talgärtner"/>  
           </Link>
         </Navbar.Brand>  

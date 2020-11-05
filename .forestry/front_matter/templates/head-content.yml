@@ -2,7 +2,7 @@
 label: Header Config
 hide_body: true
 fields:
-- name: logo_image
+- name: image
   type: file
   config:
     maxSize: '10'
