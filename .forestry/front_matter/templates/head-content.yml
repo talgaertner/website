@@ -29,5 +29,12 @@ fields:
   name: headcontact
   label: Kontakt
   default: Kontakt
+- name: header_background
+  type: color
+  config:
+    required: false
+    color_format: Hex
+  label: Header Background
+  description: Definiert Farbe des Header Hintergrunds
 pages:
 - content/data/header.md
