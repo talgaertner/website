@@ -19,20 +19,20 @@ const { frontmatter, html } = markdownRemark
 return (
   <Layout active="services">
     <SEO title={frontmatter.title} />
-    <Container fluid="md" className="layout-center">
-          <h1>{frontmatter.title}</h1>
+    <Container fluid="md" className="layout-leistung">
+          <h1 className="leistung-header">{frontmatter.title}</h1>
           <Row xs={1} md={2} className="justify-content-md-center">
-            <Col>
+            <Col className="pb-3">
               <Img fluid={frontmatter.image.childImageSharp.fluid} />
             </Col>
             <Col>
                 <div className="wrap" dangerouslySetInnerHTML={{__html: frontmatter.simple}} />
-                <h4>
+                <h4 className="contact">
                   <Link to="/contact">{frontmatter.contact_text}</Link> 
                 </h4>
             </Col>
           </Row>
-          <Row className="pt-4">
+          <Row className="extra pt-4">
             <Col>
               <div className="wrap" dangerouslySetInnerHTML={{__html: html}}/>
             </Col>

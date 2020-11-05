@@ -2,6 +2,13 @@
 label: Site Config
 hide_body: false
 fields:
+- name: header_background
+  type: color
+  config:
+    required: false
+    color_format: Hex
+  label: Header Background
+  description: Definiert Farbe des Header Hintergrunds
 - type: text
   name: title
   label: title

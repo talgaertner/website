@@ -17,6 +17,7 @@ graphql`query {
       about
       headcontact
       home
+      header_background
       image {
         childImageSharp {
           fixed(height: 75, width: 75) {
@@ -41,6 +42,7 @@ graphql`query {
     }
   }
 }`)
+
 
   return (
       <Navbar className="navcontainer" fixed="top" collapseOnSelect expand="lg">

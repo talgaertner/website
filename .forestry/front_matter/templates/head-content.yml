@@ -2,13 +2,6 @@
 label: Header Config
 hide_body: true
 fields:
-- name: header_background
-  type: color
-  config:
-    required: false
-    color_format: Hex
-  label: Header Background
-  description: Definiert Farbe des Header Hintergrunds
 - name: image
   type: file
   config:

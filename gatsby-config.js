@@ -85,6 +85,13 @@ module.exports = {
     },
     { 
       resolve:`gatsby-plugin-sass`,
+      options: {
+        data: `$font: ${config.font}; 
+         $background: ${config.header_background};
+         $font_pc: ${config.font_size_pc}px;
+         $font_4K: ${config.font_size_4k}px;
+         $font_mobile: ${config.font_size_mobile}px;`
+      }
     },
     {
       resolve: `gatsby-source-instagram`,

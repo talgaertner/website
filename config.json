@@ -8,5 +8,7 @@
   "font": "Avenir",
   "font_size_pc": 20,
   "font_size_mobile": 14,
-  "font_size_4k": 25
+  "font_size_4k": 25,
+  "header_background": "#96C11E"
+
 }

@@ -27,7 +27,7 @@ query {
         caption
         localFile {
           childImageSharp {
-            fluid(quality: 70, maxWidth: 600, maxHeight: 600) {
+            fluid(quality: 70, maxWidth: 300, maxHeight: 400) {
               ...GatsbyImageSharpFluid_withWebp              
             }
           }
@@ -74,7 +74,7 @@ query {
 
 return ( <Layout active="home">
     <SEO title={data.content.frontmatter.seotitle} />
-    <Container fluid="md" className="layout-center pb-4">
+    <Container fluid="md" className="layout-home pb-4">
     <Row xs={1} md={2} className="justify-content-md-center">
       <Col>
         <div className="wrap" dangerouslySetInnerHTML={{__html: data.content.frontmatter.intro }} />
