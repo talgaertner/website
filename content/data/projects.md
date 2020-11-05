@@ -1,5 +1,6 @@
 ---
-seotitle: "Projekte"
-intro: "Folgen Sie uns auf Instagram. Um unsere aktuellsten Projekte zu sehen."
+seotitle: Projekte
+intro: Auf Instagram gewinnen Sie noch mehr Einblicke in unsere Arbeit – folgen Sie
+  uns jetzt!
 
 ---
