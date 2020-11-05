@@ -3,5 +3,10 @@
   "description": "Gartenpflege und Gestaltung. Baumfällung und Pflege. Holz und Steinterrassen. Teich und Zaunbau. Und vieles mehr",
   "repository_url": "https://github.com/talgaertner/",
   "site_url": "https://www.talgaertner.de",
-  "author": "Jacob Hart und Hendrik Hitschler GbR"
+  "author": "Jacob Hart und Hendrik Hitschler GbR",
+  "siteUrl": "",
+  "font": "Avenir",
+  "font_size_pc": 20,
+  "font_size_mobile": 14,
+  "font_size_4k": 25
 }
