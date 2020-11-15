@@ -18,7 +18,7 @@ const data = useStaticQuery(graphql`
       frontmatter {
         image {
           childImageSharp {
-            fluid(maxWidth: 300) {
+            fluid(quality: 100, maxHeight: 1280) {
               ...GatsbyImageSharpFluid
             }
           }
@@ -38,7 +38,7 @@ return (
       <Row xs={1} md={2}>
         <Col className="pb-3"> { (data) => { 
         if ( data.content.frontmatter.image != null ) {
-          return (<Img fluid={data.content.frontmatter.image.childImageSharp.fluid} />);
+          return <Img fluid={data.content.frontmatter.image.childImageSharp.fluid} />;
           }
         }}
         </Col>

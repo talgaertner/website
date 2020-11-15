@@ -7,6 +7,7 @@ import SEO from "../../components/seo"
 import Container from "react-bootstrap/Container"
 import Col from "react-bootstrap/Col"
 import Row from "react-bootstrap/Row"
+import Button from "react-bootstrap/Button"
 
 
 export default function Template({data}) {
@@ -27,9 +28,9 @@ return (
             </Col>
             <Col>
                 <div className="wrap" dangerouslySetInnerHTML={{__html: frontmatter.simple}} />
-                <h4 className="contact">
+                <Button variant="success" className="contact">
                   <Link to="/contact">{frontmatter.contact_text}</Link> 
-                </h4>
+                </Button>
             </Col>
           </Row>
           <Row className="extra pt-4">
@@ -53,7 +54,7 @@ query data($slug: String){
       simple
       image {
         childImageSharp {
-          fluid(maxWidth: 300) {
+          fluid(quality: 100, maxHeight: 1280) {
             ...GatsbyImageSharpFluid
           }
         }

@@ -23,16 +23,16 @@ const CarouselItem = ({data, node, index}) => {
                     {data.insta.edges.map(instagram => {
                       if ( instagram.node.caption !== null && found === false && instagram.node.caption.indexOf(node.frontmatter.title.split("/").join("")) !== -1 ) {
                         found = true;
-                        return (<Link to={`/projects#${instagram.node.id}`}>
-                          <Img fluid={instagram.node.localFile.childImageSharp.fluid} />
+                        return (<Link className="link-carousel" to={`/projects#${instagram.node.id}`}>
+                          <Img fluid={instagram.node.localFile.childImageSharp.fluid} alt={`${node.frontmatter.title} Image`} />
                         </Link>)
                       } else {
                         return "";
                       } 
                     })}
                     {
-                      found === false ? (<Link to={node.fields.slug}>
-                        <Img fluid={node.frontmatter.image.childImageSharp.fluid} />
+                      found === false ? (<Link className="link-carousel" to={node.fields.slug}>
+                        <Img fluid={node.frontmatter.image.childImageSharp.fluid} alt={`${node.frontmatter.title} Image`} />
                       </Link>) : ""
                     }
                   </Col>
@@ -42,16 +42,16 @@ const CarouselItem = ({data, node, index}) => {
                     <Link to={node.fields.slug}>
                       {data.logos.edges.map(current => {
                           if ( current.node.name.indexOf(node.fields.slug.split("/").join("")) !== -1 ) {
-                            return <Image className="icon" width="25" src={current.node.childImageSharp.fixed.src} roundedCircle fluid />
+                            return <Image key={`${node.frontmatter.title}_icon_${index}`} className="icon" width="25" src={current.node.childImageSharp.fixed.src} alt={`${node.frontmatter.title} Icon`} roundedCircle fluid />
                           } else {
-                            return <Image className="icon" width="25" src={logo} roundedCircle fluid />
+                            return <Image key={`${node.frontmatter.title}_icon_${index}`} className="icon" width="25" src={logo} alt={`${node.frontmatter.title} Icon`} roundedCircle fluid />
                           }
                         })}
                     </Link>
                   </Col>
                   <Col className="pr-4 pl-0" xs={8} md={8}>
                     <Link to={node.fields.slug}>
-                      <h5>{node.frontmatter.title}</h5>
+                      <span className="carouselText">{node.frontmatter.title}</span>
                     </Link>
                   </Col>
                 </Row>

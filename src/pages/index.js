@@ -27,7 +27,7 @@ query {
         caption
         localFile {
           childImageSharp {
-            fluid(quality: 70, maxWidth: 300, maxHeight: 400) {
+            fluid(quality: 100, maxHeight: 1280) {
               ...GatsbyImageSharpFluid_withWebp              
             }
           }
@@ -47,7 +47,7 @@ query {
           title
           image {
             childImageSharp {
-              fluid(quality: 100, maxWidth: 300, maxHeight: 400) {
+              fluid(quality: 100, maxHeight: 1280) {
                 ...GatsbyImageSharpFluid
               }
             }

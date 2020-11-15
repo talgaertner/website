@@ -86,7 +86,8 @@ module.exports = {
     { 
       resolve:`gatsby-plugin-sass`,
       options: {
-        data: `$font: ${config.font}; 
+        data: `
+         $font: ${config.font}; 
          $background: ${config.header_background};
          $font_pc: ${config.font_size_pc}px;
          $font_4K: ${config.font_size_4k}px;
@@ -114,9 +115,9 @@ module.exports = {
           },
         ],
       },
-    }
+    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
+    `gatsby-plugin-offline`,
   ],
 }

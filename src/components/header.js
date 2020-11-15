@@ -45,7 +45,7 @@ graphql`query {
 
 
   return (
-      <Navbar className="navcontainer" fixed="top" collapseOnSelect expand="lg">
+      <Navbar className="header navcontainer" fixed="top" collapseOnSelect expand="lg">
         <Navbar.Brand>
           <Link to="/">
             <img src={data.content.frontmatter.image.childImageSharp.fixed.src} width="75" height="75" className="d-inline-block align-top"
