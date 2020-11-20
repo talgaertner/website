@@ -1,6 +1,8 @@
 ---
 headline: Impressum
 intro: ''
+seotitle: ''
+seodescription: ''
 
 ---
 Angaben gemäß § 5 TMG
