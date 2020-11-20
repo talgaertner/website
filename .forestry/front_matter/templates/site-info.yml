@@ -66,5 +66,13 @@ fields:
     min: 20
     max: 40
     step: 1
+- name: seo_keywords
+  type: list
+  config:
+    use_select: false
+    min: 
+    max: 
+  label: Seo Keywords
+  description: Seo Keyword Liste
 pages:
 - config.json
