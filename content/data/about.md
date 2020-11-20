@@ -8,5 +8,6 @@ about: |-
 
   Wir gründeten die Talgärtner aus dem Wunsch heraus, die Natur der Stadt näher zu bringen und unser gelerntes Handwerk zum eigenen Business zu machen. Professionalität hat bei uns oberste Priorität – dabei darf die Nähe zum Kunden nicht fehlen!
   Wir freuen uns darauf, Sie kennen zu lernen und gemeinsam mit Ihnen Ihren Garten neu zu gestalten.
+seodescription: ''
 
 ---
