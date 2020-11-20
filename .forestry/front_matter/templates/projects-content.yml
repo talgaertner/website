@@ -17,3 +17,13 @@ fields:
     et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo
     duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est
     Lorem ipsum dolor sit amet.
+- name: seodescription
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: false
+    schema:
+      format: markdown
+  label: Seodescription
+  description: Seo Beschreibung
