@@ -15,7 +15,7 @@ console.log(content)
 
 return (  
   <Layout active="projects">
-    <SEO title={content.frontmatter.seotitle} />
+    <SEO title={content.frontmatter.seotitle} description={content.frontmatter.seodescription} />
     <Container fluid className="pb-4">
       <Row className="justify-content-md-center">
         <Col>
@@ -38,6 +38,7 @@ export const pageQuery = graphql`
     content: markdownRemark(fileAbsolutePath: {regex: "/(projects.md)/"}) {
       html
       frontmatter {
+        seodescription
         seotitle
         intro
       }

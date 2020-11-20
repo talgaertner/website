@@ -16,7 +16,7 @@ const info = require("../../content/data/info.json")
 
 return (
   <Layout active="contact">
-    <SEO title="Kontakt" />
+    <SEO title={info.seotitle} description={info.seodescription} />
     <Container fluid="md" className="layout-center">
       <Row xs={1} md={3}>
         <Col className="pb-2">

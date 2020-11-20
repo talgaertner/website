@@ -16,10 +16,11 @@ export default function Template({data}) {
 const { markdownRemark } = data
 const { frontmatter, html } = markdownRemark
 
+const image = frontmatter.image ? frontmatter.image.childImageSharp.resize : null
 
 return (
   <Layout active="services">
-    <SEO title={frontmatter.title} />
+    <SEO title={frontmatter.seotitle} image={image} description={frontmatter.seodescription}/>
     <Container fluid="md" className="layout-leistung">
           <h1 className="leistung-header">{frontmatter.title}</h1>
           <Row xs={1} md={2} className="justify-content-md-center">
@@ -49,6 +50,8 @@ query data($slug: String){
   markdownRemark(fields: {slug: {eq: $slug}}) {
     html
     frontmatter {
+      seodescription
+      seotitle
       title
       contact_text
       simple
@@ -56,6 +59,11 @@ query data($slug: String){
         childImageSharp {
           fluid(quality: 100, maxHeight: 1280) {
             ...GatsbyImageSharpFluid
+          }
+          resize(width: 1200) {
+            src,
+            width,
+            height
           }
         }
       }

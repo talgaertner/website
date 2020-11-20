@@ -21,19 +21,25 @@ const data = useStaticQuery(graphql`
             fluid(quality: 100, maxHeight: 1280) {
               ...GatsbyImageSharpFluid
             }
+            resize(width: 1200) {
+              src
+              height
+              width
+            }
           }
         }
         seotitle
+        seodescription
         about
         namen
       }
     }
   }
 `)
-
+const image = data.content.frontmatter.image ? data.content.frontmatter.image.childImageSharp.resize : null
 return (
   <Layout active="about">
-    <SEO title={data.content.frontmatter.seotitle} />
+    <SEO title={data.content.frontmatter.seotitle} image={image} description={data.content.frontmatter.seodescription}/>
     <Container fluid="md" className="layout-center">
       <Row xs={1} md={2}>
         <Col className="pb-3"> { (data) => { 

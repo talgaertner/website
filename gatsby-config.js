@@ -7,8 +7,9 @@ module.exports = {
     siteUrl: config.site_url,
     description: config.description,
     author: config.author,
-    contact: config.contact,
-    infoData: infoData
+    //contact: config.contact,
+    infoData: infoData,
+    keywords: config.seo_keywords 
   },
   plugins: [
     `gatsby-plugin-sitemap`,
@@ -78,7 +79,6 @@ module.exports = {
         short_name: `Talgaertner`,
         start_url: `/`,
         background_color: `#663399`,
-        theme_color: `#663399`,
         display: `minimal-ui`,
         icon: `content/images/logo.png`, // This path is relative to the root of the site.
       },

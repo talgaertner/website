@@ -10,7 +10,7 @@ import PropTypes from "prop-types"
 import { Helmet } from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 
-function SEO({ description, lang, meta, title }) {
+function SEO({ description, lang, meta, title, image: metaImage }) {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -20,6 +20,24 @@ function SEO({ description, lang, meta, title }) {
             siteUrl
             description
             author
+            keywords
+            infoData {
+              adresse {
+                adress_text
+                strasse
+                plz
+                stadt
+              }
+              contact {
+                call_text
+                tel
+                tel_link
+                whats_link
+                whatsapp_text
+                mail_text
+                mail
+              }
+            }           
           }
         }
       }
@@ -27,18 +45,23 @@ function SEO({ description, lang, meta, title }) {
   )
 
   const metaDescription = description || site.siteMetadata.description
+  const image = metaImage && metaImage.src ? `${site.siteMetadata.siteUrl}${metaImage.src}` : null
 
   return (
     <Helmet
       htmlAttributes={{
-        lang,
+        lang: "de"
       }}
-      title={title}
-      titleTemplate={`%s | ${site.siteMetadata.title}`}
+      title={title || site.siteMetadata.title}
+      //titleTemplate={`%s | ${site.siteMetadata.title}`}
       meta={[
         {
           name: `description`,
           content: metaDescription,
+        },
+        {
+          name: "keywords",
+          content: site.siteMetadata.keywords.join(",")
         },
         {
           property: `og:title`,
@@ -55,7 +78,7 @@ function SEO({ description, lang, meta, title }) {
      /*   {
           name: `twitter:card`,
           content: `summary`,
-        },
+        }, */
         {
           name: `twitter:creator`,
           content: site.siteMetadata.author,
@@ -67,9 +90,51 @@ function SEO({ description, lang, meta, title }) {
         {
           name: `twitter:description`,
           content: metaDescription,
-        },*/
-      ].concat(meta)}
-    />
+        },
+      ].concat(
+        metaImage 
+          ? [
+            {
+              property: "og:image",
+              content: image
+            },
+            {
+              property: "og:image:width",
+              content: metaImage.width
+            },
+            {
+              property: "og:image:height",
+              content: metaImage.height
+            },
+            {
+              name: "twitter:card",
+              content: "summary_large_image"
+            }
+          ] : [
+            {
+              name: "twitter:card",
+              content: "summary"
+            }
+          ]
+      ).concat(meta)}
+    > 
+      <script type="application/ld+json">
+      {`
+        {
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "url": ${site.siteMetadata.siteUrl},
+          "name": ${site.siteMetadata.author},
+          "email": ${site.siteMetadata.infoData.contact.mail},
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": ${site.siteMetadata.infoData.contact.tel_link},
+            "contactType": "Service"
+          }
+        }
+      `}
+      </script>
+    </Helmet>
   )
 }
 
@@ -80,12 +145,16 @@ SEO.defaultProps = {
       name: `google-site-verification`,
       content: `DTMnqKYWsS-n5IoBDZy2iax7ZzLJgK8-FRlOIEPvEow`
     }
-  ],
-  description: ``,
+  ]
 }
 
 SEO.propTypes = {
   description: PropTypes.string,
+  image: PropTypes.shape({
+    src: PropTypes.string.isRequired,
+    height: PropTypes.string.isRequired,
+    width: PropTypes.string.isRequired
+  }),
   lang: PropTypes.string,
   meta: PropTypes.arrayOf(PropTypes.object),
   title: PropTypes.string.isRequired,

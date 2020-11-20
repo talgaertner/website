@@ -15,6 +15,7 @@ query {
   content: markdownRemark(fileAbsolutePath: {regex: "/(home.md)/"}) {
     frontmatter {
       seotitle
+      seodescription
       intro
     }
     html
@@ -73,7 +74,7 @@ query {
 
 
 return ( <Layout active="home">
-    <SEO title={data.content.frontmatter.seotitle} />
+    <SEO title={data.content.frontmatter.seotitle} description={data.content.frontmatter.seodescription} />
     <Container fluid="md" className="layout-home pb-4">
     <Row xs={1} md={2} className="justify-content-md-center">
       <Col>

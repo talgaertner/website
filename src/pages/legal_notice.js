@@ -13,6 +13,8 @@ const data = useStaticQuery(graphql`
   query {
     content: markdownRemark(fileAbsolutePath: {regex: "/(impressum.md)/"}) {
       frontmatter {
+        seotitle
+        seodescription
         headline
         intro
       }
@@ -24,7 +26,7 @@ const data = useStaticQuery(graphql`
 
 return (
   <Layout>
-    <SEO title={data.content.frontmatter.headline} />
+    <SEO title={data.content.frontmatter.seotitle} description={data.content.frontmatter.seodescription}/>
     <Container fluid="md" className="layout-center">
       <Row xs={1} md={2} className="justify-content-md-center">
         <Col>
