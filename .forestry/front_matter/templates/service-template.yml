@@ -31,6 +31,16 @@ fields:
   label: Bild
   description: Bild für die Leistung eintragen
   default: "/content/images/sarah-dorweiler-9Z1KRIfpBTM-unsplash.jpg"
+- name: seodescription
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: false
+    schema:
+      format: markdown
+  label: Seodescription
+  description: Seo Beschreibung
 pages:
 - content/services/baumfallung-und-pflege.md
 - content/services/gartenpflege-und-gestaltung.md
