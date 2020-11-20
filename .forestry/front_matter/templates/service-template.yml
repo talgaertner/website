@@ -41,6 +41,12 @@ fields:
       format: markdown
   label: Seodescription
   description: Seo Beschreibung
+- name: seotitel
+  type: text
+  config:
+    required: false
+  label: Seo Titel
+  description: Seo Titel
 pages:
 - content/services/baumfallung-und-pflege.md
 - content/services/gartenpflege-und-gestaltung.md
