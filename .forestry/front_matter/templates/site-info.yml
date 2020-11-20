@@ -14,7 +14,7 @@ fields:
   label: title
 - type: text
   name: description
-  label: description
+  label: Seo Description Default
 - type: text
   name: siteUrl
   label: Webseite
