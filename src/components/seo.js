@@ -123,12 +123,12 @@ function SEO({ description, lang, meta, title, image: metaImage }) {
         {
           "@context": "https://schema.org",
           "@type": "Organization",
-          "url": ${site.siteMetadata.siteUrl},
-          "name": ${site.siteMetadata.author},
-          "email": ${site.siteMetadata.infoData.contact.mail},
+          "url": "${site.siteMetadata.siteUrl}",
+          "name": "${site.siteMetadata.author}",
+          "email": "${site.siteMetadata.infoData.contact.mail}",
           "contactPoint": {
             "@type": "ContactPoint",
-            "telephone": ${site.siteMetadata.infoData.contact.tel_link},
+            "telephone": "${site.siteMetadata.infoData.contact.tel_link}",
             "contactType": "Service"
           }
         }
