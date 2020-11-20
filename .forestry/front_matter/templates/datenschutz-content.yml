@@ -9,3 +9,19 @@ fields:
 - type: textarea
   name: intro
   label: Intro Text
+- name: seotitle
+  type: text
+  config:
+    required: false
+  label: Seotitle
+  description: Seo Titel
+- name: seodescription
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: false
+    schema:
+      format: markdown
+  label: Seodescription
+  description: Seo Beschreibung
