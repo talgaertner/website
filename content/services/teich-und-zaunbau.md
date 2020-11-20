@@ -6,5 +6,7 @@ simple: "<p>Unsere Angebote im Bereich Teich- und Zaunbau:</p><ul><li><p>Erstell
   vieles mehr...</p></li></ul>"
 image: "/content/images/photo_2020-10-18_17-02-58.jpg"
 title: Teich- und Zaunbau
+seodescription: Teich- und Zaunbau
+seotitel: Teich- und Zaunbau
 
 ---
