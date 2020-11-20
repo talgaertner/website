@@ -54,5 +54,21 @@ fields:
     name: mail
     label: E-Mail
     default: talgaertner@gmx.de
+- name: seotitle
+  type: text
+  config:
+    required: false
+  label: Seotitle
+  description: Seo Titel
+- name: seodescription
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: false
+    schema:
+      format: markdown
+  label: Seodescription
+  description: Seo Beschreibung
 pages:
 - content/data/info.json
