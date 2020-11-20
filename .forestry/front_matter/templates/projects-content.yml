@@ -27,3 +27,5 @@ fields:
       format: markdown
   label: Seodescription
   description: Seo Beschreibung
+pages:
+- content/data/projects.md
